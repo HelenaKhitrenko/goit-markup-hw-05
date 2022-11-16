@@ -5,6 +5,31 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -301,7 +326,6 @@ img {
 .project-subtitle {
   color: var(--white);
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
@@ -312,7 +336,6 @@ img {
   width: 370px;
   height: 70px;
   bottom: 0;
-  margin: 0;
 }
 
 .doing-list .item {
@@ -393,11 +416,11 @@ img {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: background-color var(--animation), color var(--animation);
 }
 
 .team-soc-icon {
   fill: currentColor;
-  transition: background-color var(--animation), color var(--animation);
 }
 
 .team-soc-link:hover,
@@ -427,11 +450,11 @@ img {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: color var(--animation);
 }
 
 .client-list-icon {
   fill: currentColor;
-  transition: color var(--animation);
 }
 
 .client-list-link:hover,
@@ -626,7 +649,8 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-link:hover .portfolio-top-text {
+.portfolio-link:hover .portfolio-top-text,
+.portfolio-link:focus .portfolio-top-text {
   transform: translateY(0);
 }
 
